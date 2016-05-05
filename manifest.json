@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Goodreads 'Search MAM' button",
+  "description": "Adds a 'Search MAM' button to books on Goodreads",
+  "version": "0.2",
+  "permissions": [
+    "tabs", 
+	"https://www.goodreads.com/book/show/*", 
+	"https://www.myanonamouse.net/*"
+  ],
+  "content_scripts": [
+  {
+    "matches": [
+      "https://www.goodreads.com/book/show/*"
+    ],
+    "js": ["inject.js"]
+  }
+]
+}
