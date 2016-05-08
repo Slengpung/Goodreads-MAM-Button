@@ -7,6 +7,9 @@ var mamSearchUrl = "https://www.myanonamouse.net/tor/browse.php?tor[text]=" + bo
 
 // Add 'Search MAM' button
 var buttonBar = document.getElementById("buyButtonContainer");
+if (buttonBar == null || buttonBar == "null") {
+	buttonBar = document.getElementById("asyncBuyButtonContainer");
+}
 var buttonUl  = buttonBar.getElementsByTagName("ul");
 var mamButton = document.createElement("li");
 mamButton.innerHTML = '<a id="mamLink" href="' + mamSearchUrl + '" target="_blank" class="buttonBar">Search MAM</a>';
